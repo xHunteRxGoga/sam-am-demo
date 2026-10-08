@@ -3,32 +3,11 @@ const NAV = [
     { id: "group-shashlik-lamb", title: "Баранина" },
     { id: "group-shashlik-beef", title: "Говядина" },
     { id: "group-shashlik-pork", title: "Свинина" },
-    { id: "group-shashlik-chicken", title: "Курица" },
-    { id: "group-shashlik-grill", title: "Кура гриль в лаваше" }
+    { id: "group-shashlik-chicken", title: "Курица" }
   ]},
   { id: "lyulya", title: "Люля-кебаб" },
-  { id: "lyulya-lavash", title: "Люля-кебаб в лаваше" },
-  { id: "boxes", title: "САМ·АМ! Боксы" },
   { id: "shawarma", title: "Шаурма" },
-  { id: "vegetables", title: "Овощи на углях" },
-  { id: "hot", title: "Горячие блюда" },
-  { id: "snacks-hot", title: "Горячие закуски" },
-  { id: "snacks-cold", title: "Холодные закуски" },
-  { id: "sides", title: "Гарниры" },
-  { id: "extras", title: "Дополнительно", children: [
-    { id: "item-fries", title: "Картофель фри" },
-    { id: "group-extras-sauces", title: "Соусы" },
-    { id: "item-lavash", title: "Лаваш" },
-    { id: "item-veg-plate", title: "Овощная тарелка" }
-  ]},
-  { id: "drinks", title: "Напитки", children: [
-    { id: "group-drinks-lemonade", title: "Лимонады" },
-    { id: "item-mors", title: "Морсы" },
-    { id: "item-kompot", title: "Компоты" },
-    { id: "item-pear", title: "Груша" },
-    { id: "item-tarkhun", title: "Тархун" },
-    { id: "item-energy", title: "Энергетические напитки" }
-  ]}
+  { id: "grill", title: "На гриле" }
 ];
 
 const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;

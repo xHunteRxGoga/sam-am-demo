@@ -1,5 +1,5 @@
-const STATE_KEY = "samam-state";
-const CART_KEY = "samam-cart";
+const STATE_KEY = "samam-state-v2";
+const CART_KEY = "samam-cart-v2";
 const ADMIN_KEY = "samam-admin-key";
 
 function clone(value) {
