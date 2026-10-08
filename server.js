@@ -127,6 +127,7 @@ const server = http.createServer(async (req, res) => {
     return;
   }
   let pathname = url.pathname === "/" ? "/index.html" : url.pathname;
+  if (pathname === "/admin" || pathname === "/admin/") pathname = "/admin/index.html";
   const file = safeFile(pathname);
   if (!file) {
     send(res, 403, "Forbidden", "text/plain; charset=utf-8");
