@@ -153,7 +153,7 @@ function renderPhones() {
   $("footer-address").textContent = state.settings.address;
   $("footer-hours").textContent = state.settings.hours || "Режим работы уточняется";
   $("map-link").href = state.settings.mapUrl;
-  $("map-frame").src = "https://yandex.ru/map-widget/v1/?text=" + encodeURIComponent(state.settings.address) + "&z=16";
+  if ($("map-card")) $("map-card").href = state.settings.mapUrl;
   const socials = state.settings.socials || [];
   $("socials").innerHTML = socials.filter((item) => item.url).map((item) => `<a href="${esc(item.url)}" target="_blank" rel="noopener">${esc(item.name)}</a>`).join(" · ");
   $("legal").textContent = state.settings.legal || "";
@@ -413,7 +413,7 @@ function bind() {
     toast("Текст заказа скопирован — вставьте его в чат MAX");
     openMax();
   });
-  $("order-form").addEventListener("submit", async (event) => {
+  $("checkout").addEventListener("submit", async (event) => {
     event.preventDefault();
     const data = readForm();
     const digits = (data.phone || "").replace(/\D/g, "");
