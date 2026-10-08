@@ -82,8 +82,11 @@ const server = http.createServer(async (req, res) => {
       const payload = JSON.parse(await readBody(req, 100000));
       const access = readAccess();
       const phone = last10(payload.phone);
-      const allowed = (access.phones || []).map(last10);
-      if (!allowed.includes(phone) || String(payload.password || "") !== String(access.password || "")) {
+      const users = Array.isArray(access.users)
+        ? access.users
+        : (access.phones || []).map((item) => ({ phone: item, password: access.password }));
+      const user = users.find((item) => last10(item.phone) === phone);
+      if (!user || String(payload.password || "") !== String(user.password || "")) {
         send(res, 401, JSON.stringify({ ok: false, error: "Неверный номер или пароль" }));
         return;
       }

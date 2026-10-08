@@ -150,12 +150,13 @@ a { color: inherit; }
 
 .hero {
   position: relative;
-  min-height: calc(100svh - var(--header));
+  min-height: 620px;
+  height: min(780px, calc(100svh - var(--header)));
   display: flex;
   align-items: center;
   background:
-    linear-gradient(90deg, rgba(8, 7, 6, 0.72) 0%, rgba(8, 7, 6, 0.45) 48%, rgba(8, 7, 6, 0.12) 100%),
-    url("../images/hero.jpg") center 55% / cover no-repeat;
+    linear-gradient(90deg, rgba(8, 7, 6, 0.78) 0%, rgba(8, 7, 6, 0.55) 46%, rgba(8, 7, 6, 0.35) 100%),
+    url("../images/hero.jpg") center / cover no-repeat;
 }
 .hero-inner { padding: 48px 0 36px; max-width: 760px; }
 .hero h1 {
@@ -480,9 +481,11 @@ a { color: inherit; }
   .hero {
     min-height: auto;
     align-items: stretch;
+    height: auto;
+    min-height: 0;
     background:
-      linear-gradient(180deg, rgba(8, 7, 6, 0.35) 0%, rgba(8, 7, 6, 0.72) 78%),
-      url("../images/hero.jpg") center 30% / cover no-repeat;
+      linear-gradient(180deg, rgba(8, 7, 6, 0.5) 0%, rgba(8, 7, 6, 0.62) 100%),
+      url("../images/hero.jpg") center / cover no-repeat;
   }
   .hero-lead { font-size: 16px; }
   .hero-actions { flex-direction: column; }
