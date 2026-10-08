@@ -79,10 +79,12 @@ function actionHtml(item) {
   return `<div class="stepper"><button type="button" data-dec="${esc(item.id)}" aria-label="Меньше">−</button><span>${qty}</span><button type="button" data-inc="${esc(item.id)}" aria-label="Больше">+</button></div>`;
 }
 
-function cardHtml(item) {
+function cardHtml(item, anchorId) {
+  const eyebrow = item.groupTitle ? `<p class="eyebrow"${anchorId ? ` id="${esc(anchorId)}"` : ""}>${esc(item.groupTitle)}</p>` : "";
   return `<article class="card" id="item-${esc(item.id)}" data-open="${esc(item.id)}">
     <div class="card-photo"><img src="${esc(safeSrc(item.image))}" alt="${esc(item.name)}"></div>
     <div class="card-body">
+      ${eyebrow}
       <h3>${esc(item.name)}</h3>
       <p class="desc">${esc(item.description || "")}</p>
       <p class="comp"><span>Состав: </span>${esc(item.composition || "")}</p>
@@ -95,12 +97,14 @@ function cardHtml(item) {
 function renderCatalog() {
   $("catalog").innerHTML = state.categories.map((category) => {
     const items = visibleItems(category);
-    const groups = groupsOf(items);
+    const seenGroups = new Set();
     const body = items.length
-      ? groups.map((group) => {
-          const title = group.title ? `<h3 class="group-title" id="group-${esc(category.id)}-${esc(group.id)}">${esc(group.title)}</h3>` : "";
-          return `${title}<div class="grid${category.highlight ? " boxes" : ""}">${group.items.map(cardHtml).join("")}</div>`;
-        }).join("")
+      ? `<div class="grid${category.highlight ? " boxes" : ""}">${items.map((item) => {
+          const anchor = item.group ? `group-${category.id}-${item.group}` : "";
+          const mark = anchor && !seenGroups.has(anchor);
+          if (mark) seenGroups.add(anchor);
+          return cardHtml(item, mark ? anchor : "");
+        }).join("")}</div>`
       : `<p class="note">Позиции этого раздела появятся здесь, когда их добавят в меню.</p>`;
     return `<section class="section${category.highlight ? " highlight" : ""}" id="${esc(category.id)}">
       <div class="wrap">
