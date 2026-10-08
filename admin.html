@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Панель — САМ·АМ!</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="dash-body">
+  <div class="gate" id="gate">
+    <form class="gate-card" id="login-form">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><path fill="#E6B03F" d="M41.3 32 L60 21.2 A30 30 0 1 0 60 42.8 Z"/><path fill="#E6B03F" d="M48.5 28.8 L57.6 27 A26.1 26.1 0 0 1 57.6 37 L48.5 35.2 A16.8 16.8 0 0 0 48.5 28.8 Z"/></svg>
+      <h1>Вход в панель</h1>
+      <p>Только с рабочих номеров кафе.</p>
+      <label class="field"><span>Номер телефона</span><input id="login-phone" inputmode="tel" autocomplete="username" placeholder="+7 932 601-13-31" required></label>
+      <label class="field"><span>Пароль</span><input id="login-password" type="password" autocomplete="current-password" required></label>
+      <button class="btn" type="submit">Войти</button>
+      <p class="login-error" id="login-error" hidden></p>
+    </form>
+  </div>
+  <div class="dash" id="dash" hidden>
+    <aside class="side">
+      <a class="side-brand" href="index.html">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><path fill="#E6B03F" d="M41.3 32 L60 21.2 A30 30 0 1 0 60 42.8 Z"/><path fill="#E6B03F" d="M48.5 28.8 L57.6 27 A26.1 26.1 0 0 1 57.6 37 L48.5 35.2 A16.8 16.8 0 0 0 48.5 28.8 Z"/></svg>
+        <span><b>САМ·АМ!</b><small>Панель меню</small></span>
+      </a>
+      <nav class="side-nav" aria-label="Разделы">
+        <button class="nav-btn is-active" type="button" data-view="home">Обзор</button>
+        <button class="nav-btn" type="button" data-view="menu">Меню</button>
+        <button class="nav-btn" type="button" data-view="contacts">Контакты</button>
+        <button class="nav-btn" type="button" data-view="files">Excel</button>
+      </nav>
+      <div class="side-cats" id="side-cats" aria-label="Категории"></div>
+      <div class="side-foot">
+        <p class="status" id="mode">Проверяем сохранение…</p>
+        <button class="nav-btn" id="logout" type="button">Выйти</button>
+      </div>
+    </aside>
+    <div class="workspace">
+      <header class="top">
+        <div>
+          <p class="crumb" id="crumb">Панель</p>
+          <h1 id="title">Обзор</h1>
+        </div>
+        <div class="top-actions">
+          <label class="search"><span class="sr">Найти блюдо</span><input id="search" type="search" placeholder="Найти блюдо"></label>
+          <a class="btn line" href="index.html">На сайт</a>
+          <button class="btn" id="save" type="button">Сохранить</button>
+        </div>
+      </header>
+      <p class="mobile-status" id="mode-copy"></p>
+      <p class="save-note" id="save-note" hidden>Есть правки, которые ещё не на сайте. Нажмите «Сохранить».</p>
+      <div id="view"></div>
+    </div>
+  </div>
+
+  <div class="editor-back" id="editor-back" hidden></div>
+  <aside class="editor" id="editor" hidden aria-labelledby="editor-title">
+    <div class="editor-head">
+      <h2 id="editor-title">Блюдо</h2>
+      <button class="icon-btn" id="editor-close" type="button" aria-label="Закрыть">×</button>
+    </div>
+    <form class="editor-body" id="editor-form">
+      <button class="photo-pick" type="button" id="photo-pick">
+        <img id="editor-photo" alt="">
+        <span>Заменить фото</span>
+      </button>
+      <input id="editor-file" type="file" accept="image/*" hidden>
+      <label class="field"><span>Название</span><input id="editor-name" required></label>
+      <div class="split">
+        <label class="field"><span>Цена, ₽</span><input id="editor-price" inputmode="decimal" placeholder="Пусто — уточняется"></label>
+        <label class="field"><span>Вес или объём</span><input id="editor-weight" placeholder="250 г"></label>
+      </div>
+      <label class="field"><span>Категория</span><select id="editor-cat"></select></label>
+      <label class="field"><span>Описание</span><textarea id="editor-description" rows="3"></textarea></label>
+      <label class="field"><span>Состав</span><textarea id="editor-composition" rows="3"></textarea></label>
+      <label class="switch"><input id="editor-hidden" type="checkbox"><span>Скрыть на сайте</span></label>
+      <div class="editor-actions">
+        <button class="btn" id="editor-done" type="submit">Готово</button>
+        <button class="btn line" id="editor-delete" type="button">Убрать из меню</button>
+      </div>
+      <p class="hint">«Готово» записывает блюдо в список. «Сохранить» наверху публикует меню на сайт.</p>
+    </form>
+  </aside>
+  <input id="import" type="file" accept=".xlsx,.xls,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel" hidden>
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+  <div class="toast" id="toast" hidden></div>
+  <script src="js/menu-data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

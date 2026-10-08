@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>САМ·АМ! — доставка бакинского шашлыка в Екатеринбурге</title>
+  <meta name="description" content="Сочный шашлык, ароматная шаурма и блюда с мангала. Доставка САМ·АМ! по Екатеринбургу.">
+  <meta name="theme-color" content="#0c0b09">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="images/hero.jpg">
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "САМ·АМ!",
+    "servesCuisine": ["Кавказская кухня", "Шашлык", "Шаурма"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ул. Дошкольная, 26",
+      "addressLocality": "Екатеринбург",
+      "addressCountry": "RU"
+    },
+    "telephone": ["+79326011331", "+73433613931"],
+    "hasMenu": "https://samam.local/#catalog"
+  }
+  </script>
+</head>
+<body id="top">
+  <a class="skip" href="#catalog">К меню</a>
+  <header class="header" id="header">
+    <div class="wrap header-inner">
+      <button class="menu-btn" id="nav-toggle" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Открыть меню категорий"><span></span></button>
+      <a class="brand" href="#top">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <path fill="#E6B03F" d="M41.3 32 L60 21.2 A30 30 0 1 0 60 42.8 Z"/>
+          <path fill="#E6B03F" d="M48.5 28.8 L57.6 27 A26.1 26.1 0 0 1 57.6 37 L48.5 35.2 A16.8 16.8 0 0 0 48.5 28.8 Z"/>
+        </svg>
+        <span>
+          <span class="brand-name">САМ·АМ!</span>
+          <span class="brand-sub">Кафе · столовая</span>
+          <span class="brand-tag">Доставка бакинского шашлыка</span>
+        </span>
+      </a>
+      <div class="header-tools">
+        <div class="phones" id="phones"></div>
+        <button class="icon-btn" id="call-btn" type="button" aria-label="Позвонить">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 3h3l2 5-2 1a12 12 0 0 0 5 5l1-2 5 2v3c0 1-1 2-2 2C10 19 5 14 5 5c0-1 1-2 2-2z" stroke="#E0B15A" stroke-width="1.7"/></svg>
+        </button>
+        <button class="cart-btn" id="cart-open" type="button" aria-label="Открыть корзину">
+          <span class="cart-label">Корзина</span>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <p class="script">Готовим с душой</p>
+      <h1>САМ·АМ!<span>Вкус, который объединяет</span></h1>
+      <p class="hero-lead">Сочный шашлык, ароматная шаурма и любимые блюда, приготовленные с душой. Настоящий вкус мангала с доставкой к вашему столу.</p>
+      <div class="hero-actions">
+        <button class="btn" id="to-menu" type="button">Смотреть меню</button>
+        <button class="btn line" id="to-order" type="button">Заказать доставку</button>
+      </div>
+      <div class="perks">
+        <div class="perk">
+          <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 28c6-4 8-8 8-13a8 8 0 0 0-16 0c0 5 2 9 8 13z" stroke="#E0B15A" stroke-width="1.6"/><path d="M16 22c2.2-1.6 3-3.2 3-5.2a3 3 0 0 0-6 0c0 2 0.8 3.6 3 5.2z" fill="#E0B15A"/></svg>
+          <strong>Готовим на настоящем мангале</strong>
+        </div>
+        <div class="perk">
+          <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M6 20c4-8 16-8 20 0" stroke="#E0B15A" stroke-width="1.6"/><path d="M9 20h14v3H9zM11 23v3M21 23v3M8 26h16" stroke="#E0B15A" stroke-width="1.6"/></svg>
+          <strong>Только свежие продукты</strong>
+        </div>
+        <div class="perk">
+          <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M4 20h16l3-5h4v5h2" stroke="#E0B15A" stroke-width="1.6"/><circle cx="10" cy="23" r="2" stroke="#E0B15A" stroke-width="1.6"/><circle cx="22" cy="23" r="2" stroke="#E0B15A" stroke-width="1.6"/></svg>
+          <strong>Доставка по Екатеринбургу</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="rail" id="rail" aria-label="Категории меню"><div class="wrap rail-inner" id="rail-inner"></div></nav>
+  <main id="catalog"></main>
+
+  <section class="section" id="about">
+    <div class="wrap about">
+      <div>
+        <p class="script">С любовью к каждому блюду</p>
+        <h2>САМ·АМ! — вкус, который объединяет</h2>
+        <p>Мы любим настоящую кухню, аромат свежеприготовленного мяса и атмосферу тёплого гостеприимства.</p>
+        <p>Готовим сочные шашлыки на мангале, ароматную шаурму, традиционные блюда и закуски, уделяя внимание качеству продуктов и вкусу каждого блюда.</p>
+        <p>Для нас вкусная еда — это больше, чем просто обед. Это повод собраться с близкими, провести время с друзьями и насладиться любимыми блюдами.</p>
+        <p><b>САМ·АМ! — готовим с душой.</b></p>
+      </div>
+      <img src="images/hero.jpg" alt="Шашлык на мангале САМ·АМ!">
+    </div>
+  </section>
+
+  <footer class="footer" id="contacts">
+    <div class="wrap footer-grid">
+      <div>
+        <p class="script">С любовью к каждому блюду</p>
+        <h2>САМ·АМ!</h2>
+        <p>Кафе-столовая.<br>Доставка бакинского шашлыка.</p>
+        <p id="footer-address"></p>
+        <p class="muted" id="footer-hours"></p>
+        <div id="footer-phones"></div>
+      </div>
+      <div>
+        <h2>Связаться</h2>
+        <p><button class="btn" type="button" id="footer-call">Позвонить</button></p>
+        <p><a id="map-link" href="https://yandex.ru/maps/?text=Екатеринбург,+Дошкольная+26" target="_blank" rel="noopener">Открыть карту</a></p>
+        <p data-max><a id="footer-max" href="https://max.ru/" target="_blank" rel="noopener">Написать в MAX</a></p>
+        <p id="socials"></p>
+        <p><a class="admin-link" href="admin.html">Редактировать меню</a></p>
+      </div>
+      <iframe class="map" id="map-frame" title="Карта: Екатеринбург, Дошкольная, 26" loading="lazy"></iframe>
+    </div>
+    <div class="wrap"><p class="legal" id="legal"></p></div>
+  </footer>
+
+  <div class="backdrop" id="backdrop" hidden></div>
+  <aside class="drawer" id="drawer" hidden>
+    <div class="drawer-panel">
+      <div class="panel-head">
+        <h2>Меню</h2>
+        <button class="icon-btn" id="drawer-close" type="button" aria-label="Закрыть меню">×</button>
+      </div>
+      <div class="drawer-body" id="drawer-body"></div>
+    </div>
+  </aside>
+
+  <aside class="cart" id="cart" hidden>
+    <div class="cart-panel">
+      <div class="panel-head">
+        <h2>Корзина</h2>
+        <button class="icon-btn" id="cart-close" type="button" aria-label="Закрыть корзину">×</button>
+      </div>
+      <div class="cart-body" id="cart-body"></div>
+      <div class="cart-foot">
+        <div class="total"><span>Итого</span><span id="cart-total">0 ₽</span></div>
+        <p class="muted">Только доставка по Екатеринбургу. Самовывоз не оформляем. Стоимость доставки сообщит оператор.</p>
+        <label class="field"><span>Комментарий к заказу</span><textarea id="cart-comment" rows="2" placeholder="Например, без лука"></textarea></label>
+        <div class="ways" id="cart-order">
+          <button class="btn line" id="call-order" type="button">Позвонить</button>
+          <button class="btn line" id="max-order" type="button" data-max>Заказать в MAX</button>
+          <button class="btn" id="go-checkout" type="button">Оформить на сайте</button>
+        </div>
+        <form id="checkout" hidden>
+          <h3>Доставка</h3>
+          <label class="field"><span>Имя покупателя</span><input name="name" required autocomplete="name"></label>
+          <label class="field"><span>Номер телефона</span><input name="phone" required inputmode="tel" autocomplete="tel" placeholder="+7"></label>
+          <div class="form-grid">
+            <label class="field"><span>Улица</span><input name="street" required></label>
+            <label class="field"><span>Дом</span><input name="house" required></label>
+            <label class="field"><span>Квартира / офис</span><input name="flat"></label>
+            <label class="field"><span>Подъезд</span><input name="entrance"></label>
+            <label class="field"><span>Этаж</span><input name="floor"></label>
+            <label class="field"><span>Время получения</span><input name="time" placeholder="Как можно скорее"></label>
+          </div>
+          <label class="field"><span>Комментарий для курьера</span><textarea name="courier" rows="2"></textarea></label>
+          <button class="btn" type="submit">Подтвердить доставку</button>
+        </form>
+        <div id="order-done" hidden>
+          <p>Заказ собран. Отправьте его в MAX или продиктуйте по телефону — так кухня его получит.</p>
+          <pre class="order-text" id="order-preview"></pre>
+          <div class="ways">
+            <button class="btn" id="copy-order" type="button">Скопировать заказ</button>
+            <button class="btn line" id="max-done" type="button" data-max>Открыть MAX</button>
+            <button class="btn line" id="call-done" type="button">Позвонить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="sheet" id="sheet" hidden>
+    <div class="sheet-panel">
+      <div class="panel-head">
+        <h2 id="sheet-title">Блюдо</h2>
+        <button class="icon-btn" id="sheet-close" type="button" aria-label="Закрыть">×</button>
+      </div>
+      <div class="sheet-body"><div class="product" id="product"></div></div>
+    </div>
+  </div>
+
+  <div class="phone-pop" id="phones-sheet" hidden>
+    <strong>Позвонить</strong>
+    <div class="ways" id="phone-list"></div>
+    <button class="btn line" id="phones-close" type="button">Закрыть</button>
+  </div>
+  <div class="toast" id="toast" hidden></div>
+  <script src="js/menu-data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
