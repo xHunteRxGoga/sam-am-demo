@@ -241,6 +241,8 @@ h1, h2, h3, p { overflow-wrap: break-word; }
 }
 .rail-inner {
   display: flex;
+  justify-content: center;
+  justify-content: safe center;
   gap: 6px;
   overflow-x: auto;
   padding: 10px 0;
