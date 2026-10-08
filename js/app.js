@@ -7,7 +7,11 @@ const NAV = [
   ]},
   { id: "lyulya", title: "Люля-кебаб" },
   { id: "shawarma", title: "Шаурма" },
-  { id: "grill", title: "На гриле" }
+  { id: "grill", title: "На гриле" },
+  { id: "boxes", title: "Боксы" },
+  { id: "hot", title: "Горячее" },
+  { id: "salads", title: "Салаты" },
+  { id: "cold", title: "Закуски" }
 ];
 
 const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;

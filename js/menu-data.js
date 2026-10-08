@@ -62,6 +62,49 @@ const MENU_DEFAULT = [
       { id: "mushrooms", name: "Шампиньоны на гриле", description: "Сочные шампиньоны, приготовленные на мангале с ароматными специями.", composition: "Шампиньоны на гриле", weight: "100 г", price: 250, image: "images/dishes/mushrooms.jpg" },
       { id: "potato-grill", name: "Картофель на гриле", description: "Ароматный картофель, приготовленный на гриле с ароматными специями.", composition: "Картофель на гриле", weight: "100 г", price: 150, image: "images/dishes/potato-grill.jpg" }
     ]
+  },
+  {
+    id: "boxes",
+    title: "Боксы",
+    lead: "Ассорти из шашлыка и овощей на компанию.",
+    script: "Идеально для компании",
+    highlight: true,
+    items: [
+      { id: "box-1", name: "Бокс №1", description: "Бокс на 4 человека: ассорти из шашлыка и овощей с мангала.", composition: "Бараньи рёбра, свинина, шашлык из бастурмы, шашлык из куриного филе, люля-кебаб, картофель на гриле, овощи на гриле", weight: "на 4 человека", price: 3990, image: "images/dishes/box-1.jpg" },
+      { id: "box-2", name: "Бокс №2", description: "Бокс на 6 человек: ассорти из шашлыка и овощей с мангала.", composition: "Бараньи рёбра, свинина, шашлык из бастурмы, шашлык из куриного филе, люля-кебаб, картофель на гриле, овощи на гриле", weight: "на 6 человек", price: 5990, image: "images/dishes/box-2.jpg" },
+      { id: "box-3", name: "Бокс №3", description: "Бокс на 8 человек: ассорти из шашлыка и овощей с мангала.", composition: "Бараньи рёбра, свинина, шашлык из бастурмы, шашлык из куриного филе, люля-кебаб, картофель на гриле, овощи на гриле", weight: "на 8 человек", price: 7990, image: "images/dishes/box-3.jpg" }
+    ]
+  },
+  {
+    id: "hot",
+    title: "Горячие блюда",
+    lead: "Бакинские горячие блюда к шашлыку.",
+    script: "",
+    items: [
+      { id: "gutab", name: "Гутаб по-бакински", description: "Гутаб с зеленью и сыром.", composition: "Зелень и сыр", weight: "", price: 150, image: "images/dishes/gutab.jpg" },
+      { id: "plov", name: "Плов с мясом", description: "Ароматный плов из говядины с рассыпчатым рисом, морковью и специями.", composition: "Говядина, рис, морковь, специи", weight: "360 г", price: 350, image: "images/dishes/plov.jpg" },
+      { id: "buglama", name: "Буглама бакинская", description: "Нежная баранина, томлёная с овощами по традиционному бакинскому рецепту.", composition: "Баранина с овощами", weight: "400 г", price: 500, image: "images/dishes/buglama.jpg" },
+      { id: "dolma", name: "Долма по-бакински", description: "Нежные виноградные листья с ароматной начинкой из говядины, риса и специй по традиционному бакинскому рецепту.", composition: "Виноградные листья, говядина, рис, специи", weight: "360 г", price: 400, image: "images/dishes/dolma.jpg" }
+    ]
+  },
+  {
+    id: "salads",
+    title: "Салаты",
+    lead: "Свежие салаты к мясу с мангала.",
+    script: "",
+    items: [
+      { id: "salad-greek", name: "Салат греческий", description: "Лёгкий салат из бакинских томатов, огурцов, сладкого перца и красного лука с сыром «Брынза».", composition: "Бакинские томаты, огурцы, сладкий перец, красный лук, сыр «Брынза»", weight: "250 г", price: 350, image: "images/dishes/salad-greek.jpg" },
+      { id: "salad-mangal", name: "Мангал салат", description: "Баклажан, помидор, перец и красный лук, заправленные оливковым маслом и свежей зеленью.", composition: "Баклажан, помидор, перец, красный лук, оливковое масло, свежая зелень", weight: "220 г", price: 300, image: "images/dishes/salad-mangal.jpg" }
+    ]
+  },
+  {
+    id: "cold",
+    title: "Холодные закуски",
+    lead: "Свежие овощи и зелень к столу.",
+    script: "",
+    items: [
+      { id: "veg-bouquet", name: "Овощной букет", description: "Свежая нарезка овощей, сыра и зелени.", composition: "Помидор, огурцы, перец, редиска, сыр, кинза, петрушка, укроп, лук зелёный", weight: "420 г", price: 500, image: "images/dishes/veg-bouquet.jpg" }
+    ]
   }
 ];
 
