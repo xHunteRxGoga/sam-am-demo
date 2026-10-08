@@ -84,7 +84,31 @@ const MENU_DEFAULT = [
       { id: "gutab", name: "Гутаб по-бакински", description: "Гутаб с зеленью и сыром.", composition: "Зелень и сыр", weight: "", price: 150, image: "images/dishes/gutab.jpg" },
       { id: "plov", name: "Плов с мясом", description: "Ароматный плов из говядины с рассыпчатым рисом, морковью и специями.", composition: "Говядина, рис, морковь, специи", weight: "360 г", price: 350, image: "images/dishes/plov.jpg" },
       { id: "buglama", name: "Буглама бакинская", description: "Нежная баранина, томлёная с овощами по традиционному бакинскому рецепту.", composition: "Баранина с овощами", weight: "400 г", price: 500, image: "images/dishes/buglama.jpg" },
-      { id: "dolma", name: "Долма по-бакински", description: "Нежные виноградные листья с ароматной начинкой из говядины, риса и специй по традиционному бакинскому рецепту.", composition: "Виноградные листья, говядина, рис, специи", weight: "360 г", price: 400, image: "images/dishes/dolma.jpg" }
+      { id: "dolma", name: "Долма по-бакински", description: "Нежные виноградные листья с ароматной начинкой из говядины, риса и специй по традиционному бакинскому рецепту.", composition: "Виноградные листья, говядина, рис, специи", weight: "360 г", price: 400, image: "images/dishes/dolma.jpg" },
+      { id: "chicken-lavash", name: "Курочка-гриль в лаваше", description: "Сочная, ароматная курица-гриль с хрустящей корочкой, поданная в лаваше.", composition: "Курица-гриль, лаваш", weight: "", price: 650, image: "images/dishes/chicken-lavash.jpg" }
+    ]
+  },
+  {
+    id: "sides",
+    title: "Гарниры",
+    lead: "Лаваш и картофель к мясу с мангала.",
+    script: "",
+    items: [
+      { id: "lavash", name: "Лаваш бакинский", description: "Свежий бакинский лаваш.", composition: "Лаваш", weight: "", price: null, image: "images/dishes/lavash.jpg" },
+      { id: "fries", name: "Картофель фри", description: "Хрустящий картофель фри.", composition: "Картофель", weight: "100 г", price: 150, image: "images/dishes/fries.jpg" }
+    ]
+  },
+  {
+    id: "sauces",
+    title: "Соусы",
+    lead: "Домашние соусы к шашлыку.",
+    script: "",
+    items: [
+      { id: "sauce-adjika", name: "Соус аджика", description: "Острая домашняя аджика.", composition: "Аджика", weight: "", price: null, image: "images/dishes/sauce-adjika.jpg" },
+      { id: "sauce-tomato", name: "Соус домашний томатный", description: "Домашний томатный соус.", composition: "Томаты", weight: "", price: null, image: "images/dishes/sauce-tomato.jpg" },
+      { id: "sauce-smetana", name: "Соус сметана", description: "Нежная сметана к горячим блюдам.", composition: "Сметана", weight: "", price: null, image: "images/dishes/sauce-smetana.jpg" },
+      { id: "sauce-matsoni", name: "Соус мацони по-домашнему", description: "Домашний соус мацони с зеленью.", composition: "Мацони, зелень", weight: "", price: null, image: "images/dishes/sauce-matsoni.jpg" },
+      { id: "sauce-narsharab", name: "Соус наршараб", description: "Гранатовый соус наршараб.", composition: "Гранат", weight: "", price: null, image: "images/dishes/sauce-narsharab.jpg" }
     ]
   },
   {

@@ -170,8 +170,11 @@
   .dish .price { grid-column: 2; justify-self: start; }
 }
 @media (max-width: 640px) {
-  .stats, .home-grid, .cat-grid, .social-row { grid-template-columns: 1fr; }
+  .stats, .home-grid, .cat-grid, .social-row, .split { grid-template-columns: 1fr; }
   .side-brand small, .key-field { display: none; }
+  .editor { width: 100%; }
+  .workspace { padding: 14px 12px calc(28px + env(safe-area-inset-bottom)); }
+  .dash input, .dash textarea, .dash select { font-size: 16px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .editor, .editor-back { transition: none; }

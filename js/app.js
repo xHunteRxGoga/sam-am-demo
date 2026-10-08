@@ -10,6 +10,8 @@ const NAV = [
   { id: "grill", title: "На гриле" },
   { id: "boxes", title: "Боксы" },
   { id: "hot", title: "Горячее" },
+  { id: "sides", title: "Гарниры" },
+  { id: "sauces", title: "Соусы" },
   { id: "salads", title: "Салаты" },
   { id: "cold", title: "Закуски" }
 ];
