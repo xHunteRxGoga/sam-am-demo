@@ -118,14 +118,16 @@ h1, h2, h3, p { overflow-wrap: break-word; }
 .menu-btn[aria-expanded="true"] span::before { top: 0; transform: rotate(45deg); }
 .menu-btn[aria-expanded="true"] span::after { top: 0; transform: rotate(-45deg); }
 
-.brand { display: flex; align-items: center; text-decoration: none; min-width: 0; }
-.brand-logo { height: 78px; width: auto; display: block; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; min-width: 0; }
+.brand-logo { height: 78px; width: auto; display: block; flex: none; }
 .brand-name {
   font-family: "Cormorant Garamond", "Times New Roman", serif;
   font-weight: 700;
-  letter-spacing: 0.03em;
-  font-size: 26px;
-  line-height: 1;
+  letter-spacing: 0.08em;
+  font-size: 32px;
+  line-height: 0.9;
+  color: var(--cream);
+  white-space: nowrap;
 }
 .brand-sub, .brand-tag {
   display: block;
@@ -456,7 +458,9 @@ h1, h2, h3, p { overflow-wrap: break-word; }
 .product h3 { margin: 0; font-family: "Cormorant Garamond", "Times New Roman", serif; font-size: 32px; letter-spacing: 0.03em; text-transform: uppercase; }
 .product .price { font-family: "Cormorant Garamond", "Times New Roman", serif; color: var(--gold); font-size: 32px; }
 
-.about { display: grid; gap: 18px; align-items: center; padding-bottom: 20px; }
+.about { display: grid; gap: 22px; align-items: start; padding-bottom: 28px; }
+.about-kicker { margin: 0 0 4px; color: var(--gold); font-weight: 700; line-height: 1.45; }
+.about h2 { max-width: 18em; }
 .about img { width: 100%; height: min(420px, 62vw); object-fit: cover; object-position: center 40%; border: 1px solid var(--gold-soft); }
 .about p { line-height: 1.6; color: #efe7da; }
 
@@ -498,6 +502,7 @@ h1, h2, h3, p { overflow-wrap: break-word; }
   .wrap { width: min(1180px, calc(100% - 24px)); }
   .brand-sub, .brand-tag, .phones, .cart-label { display: none; }
   .brand-logo { height: 48px; }
+  .brand-name { font-size: 22px; letter-spacing: 0.05em; }
   .header-inner, .header-tools { gap: 8px; }
   .cart-btn, .icon-btn { padding: 0 10px; }
   .script { font-size: 22px; }
@@ -551,7 +556,7 @@ h1, h2, h3, p { overflow-wrap: break-word; }
   .grid.boxes { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 @media (min-width: 801px) {
-  .about { grid-template-columns: 1.1fr 0.9fr; }
+  .about { grid-template-columns: 1.05fr 0.95fr; align-items: stretch; }
   .footer-grid { grid-template-columns: 1.1fr 0.9fr 1fr; }
   .product { grid-template-columns: 0.9fr 1.1fr; align-items: start; }
   .about img { height: 100%; min-height: 320px; }
@@ -562,6 +567,7 @@ h1, h2, h3, p { overflow-wrap: break-word; }
 }
 @media (max-width: 380px) {
   .brand-logo { height: 42px; }
+  .brand-name { font-size: 18px; }
   .menu-btn, .icon-btn, .cart-btn { min-width: 40px; height: 40px; }
   .hero h1 { font-size: 40px; }
   .meta b { font-size: 20px; }
