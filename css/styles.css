@@ -129,6 +129,14 @@ h1, h2, h3, p { overflow-wrap: break-word; }
   color: var(--cream);
   white-space: nowrap;
 }
+.brand-copy { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.brand-line {
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+}
 .brand-sub, .brand-tag {
   display: block;
   color: var(--smoke);
@@ -307,8 +315,8 @@ h1, h2, h3, p { overflow-wrap: break-word; }
   color: inherit;
 }
 .card:hover { border-color: var(--gold); }
-.card-photo { aspect-ratio: 5 / 4; overflow: hidden; background: #2a2118; }
-.card-photo img { width: 100%; height: 100%; object-fit: cover; }
+.card-photo { aspect-ratio: 1 / 1; overflow: hidden; background: #1a1612; display: grid; }
+.card-photo img { width: 100%; height: 100%; object-fit: contain; object-position: center; }
 .card-body { padding: 12px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
 .card h3 { margin: 0; font-size: 16px; line-height: 1.25; }
 .desc, .comp { margin: 0; color: var(--smoke); font-size: 13px; line-height: 1.35; }
@@ -454,14 +462,29 @@ h1, h2, h3, p { overflow-wrap: break-word; }
 }
 
 .product { display: grid; gap: 16px; }
-.product img { width: 100%; max-height: 360px; object-fit: cover; }
+.product img { width: 100%; max-height: 520px; object-fit: contain; background: #1a1612; }
 .product h3 { margin: 0; font-family: "Cormorant Garamond", "Times New Roman", serif; font-size: 32px; letter-spacing: 0.03em; text-transform: uppercase; }
 .product .price { font-family: "Cormorant Garamond", "Times New Roman", serif; color: var(--gold); font-size: 32px; }
 
 .about { display: grid; gap: 22px; align-items: start; padding-bottom: 28px; }
 .about-kicker { margin: 0 0 4px; color: var(--gold); font-weight: 700; line-height: 1.45; }
 .about h2 { max-width: 18em; }
-.about img { width: 100%; height: min(420px, 62vw); object-fit: cover; object-position: center 40%; border: 1px solid var(--gold-soft); }
+.about-photo {
+  min-height: 280px;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid var(--gold-soft);
+  background: #120f0c;
+}
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  object-fit: cover;
+  object-position: center 42%;
+  transform: scale(1.08);
+  transform-origin: center 40%;
+}
 .about p { line-height: 1.6; color: #efe7da; }
 
 .footer { border-top: 1px solid var(--gold-soft); padding: 28px 0 18px; background: rgba(16, 14, 12, 0.78); }
@@ -503,6 +526,7 @@ h1, h2, h3, p { overflow-wrap: break-word; }
   .brand-sub, .brand-tag, .phones, .cart-label { display: none; }
   .brand-logo { height: 48px; }
   .brand-name { font-size: 22px; letter-spacing: 0.05em; }
+  .brand-line { font-size: 11px; }
   .header-inner, .header-tools { gap: 8px; }
   .cart-btn, .icon-btn { padding: 0 10px; }
   .script { font-size: 22px; }
@@ -526,9 +550,8 @@ h1, h2, h3, p { overflow-wrap: break-word; }
   .perk strong { font-size: 13px; }
   .section { padding: 26px 0 4px; }
   .section, .group-title, .card { scroll-margin-top: 116px; }
-  .card-photo { aspect-ratio: 16 / 11; }
   .form-grid, .admin-grid, .about { grid-template-columns: 1fr; }
-  .about img { height: 220px; }
+  .about-photo, .about-photo img { height: 240px; min-height: 240px; transform: none; }
   .footer .btn, .map-card { width: 100%; }
   .drawer-panel, .cart-panel, .sheet-panel {
     width: 100%;
@@ -559,7 +582,20 @@ h1, h2, h3, p { overflow-wrap: break-word; }
   .about { grid-template-columns: 1.05fr 0.95fr; align-items: stretch; }
   .footer-grid { grid-template-columns: 1.1fr 0.9fr 1fr; }
   .product { grid-template-columns: 0.9fr 1.1fr; align-items: start; }
-  .about img { height: 100%; min-height: 320px; }
+  .about-photo { position: relative; min-height: 100%; overflow: hidden; }
+  .about-photo img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    max-width: none;
+    object-fit: cover;
+    object-position: 68% 46%;
+    transform: scale(1.04);
+    transform-origin: 68% 46%;
+  }
 }
 @media (min-width: 1440px) {
   .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
